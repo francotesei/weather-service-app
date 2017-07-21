@@ -1,0 +1,41 @@
+
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Gudea:400,700' rel='stylesheet' type='text/css'>
+
+  <div class="panel panel-default panel-main ">
+    <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="table">
+        <tbody>
+        <tr  *ngFor="let f of board.forecasts ">
+          <td>
+            <div class="text-center">{{f.date}}</div>
+            <i class="wi wi-thermometer" style="color:red;"></i> {{f.high}}°
+            <i class="wi wi-thermometer-exterior" style="color: darkblue"></i> {{f.low}}°
+          </td>
+        </tr>
+        </tbody>
+        </div>
+      </div>
+      <div class="col-md-8">
+      <div class="text-center">
+       <h1> {{board.city}}</h1>
+        <h3> {{board.country}}</h3>
+        <h5> {{board.date}}</h5>
+      </div>
+        <div class="text-center">
+          <br><br>
+          <h1 style="font-size:1500%">
+            <i *ngIf="(board.status == 'Partly Cloudy')" class="wi wi-day-cloudy " style="color: yellow;"></i>
+            <i *ngIf="(board.status =='Sunny' || board.status == 'Mostly Sunny' || board.status=='Clear')" class="wi wi-day-sunny" style="color: yellow;"></i>
+            <i *ngIf="(board.status =='Cloudy' || board.status == 'Mostly Cloudy')" class="wi wi-cloudy" style="color: ghostwhite;"></i>
+            <i *ngIf="(board.status =='Thunderstorms' || board.status == 'Rain')" class="wi wi-storm-showers" style="color: grey;"></i>
+            <i *ngIf="(board.status =='Scattered Showers' || board.status == 'Scattered Thunderstorms')" class="wi wi-showers" style="color: blue;"></i>
+            <strong> {{board.temp}}°</strong></h1>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+

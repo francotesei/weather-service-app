@@ -1,0 +1,65 @@
+<div class="row body-margin" >
+  <div class="panel panel-default weather-panel" >
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+
+          <div class="row">
+            <table class="table table-reponsive">
+              <tbody>
+              <tr>
+                <td class="text-center">
+                  <i *ngIf="(status == 'Partly Cloudy')" class="wi wi-day-cloudy icon-type" style="color: yellow;"></i>
+                  <i *ngIf="(status =='Sunny' || status == 'Mostly Sunny' || status=='Clear')" class="wi wi-day-sunny icon-type" style="color: yellow;"></i>
+                  <i *ngIf="(status =='Cloudy' || status == 'Mostly Cloudy')" class="wi wi-cloudy icon-type" style="color: ghostwhite;"></i>
+                  <i *ngIf="(status =='Thunderstorms' || status == 'Rain')" class="wi wi-storm-showers icon-type" style="color: grey;"></i>
+                  <i *ngIf="(status =='Scattered Showers' || status == 'Scattered Thunderstorms')" class="wi wi-showers icon-type" style="color: blue;"></i>
+
+
+                </td>
+                <td class="text-center">
+                  <h1 style="font-size:500%"><strong>{{actTemp}}°</strong></h1>
+                </td>
+              </tr>
+              <tr>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <i class="wi wi-thermometer" style="color: red" ></i> {{highTemp}}°
+            </div>
+            <div class="col-md-6 text-center">
+              <i class="wi wi-thermometer-exterior" style="color: darkblue">
+              </i> {{lowTemp}}°
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div >
+            <h1 style="font-size:200%"><strong>{{city}}</strong></h1>
+            <h2 style="font-size:70%"><strong>{{country}}, {{region}}</strong></h2>
+            <h2 style="font-size:50%"><i>{{datetime}}</i></h2>
+          </div>
+          </div>
+
+        <div class="col-md-4 text-center">
+          <div style="width:100%;height:100%;margin-left:0%">
+            <app-forecast-chart
+              [chartData]=lineChartData
+              [chartLabels]=lineChartLabels
+
+            ></app-forecast-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+background-color rgba(0,0,0,.54)
+-->

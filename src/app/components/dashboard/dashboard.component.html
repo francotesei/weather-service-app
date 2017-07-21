@@ -1,0 +1,46 @@
+
+
+
+<div  style="text-align:center">
+  <div class="body-margin">
+    <app-navbar></app-navbar>
+  </div>
+  <h1>
+    <div *ngIf="isDataAvailable">
+      <div class="row body">
+        <app-temperature-panel
+          [city]=data?.city
+          [country]=data?.country
+          [datetime]=data?.date
+          [actTemp]=data?.temp
+          [highTemp]=data?.forecasts[0].high
+          [lowTemp]=data?.forecasts[0].low
+          [status]=data?.status
+          [lineChartLabels]=lineChartLabels
+          [lineChartData]=lineChartData>
+        </app-temperature-panel>
+      </div>
+      <div class="row body">
+        <div class="col-md-7">
+          <app-forecast-panel [forecast]=data?.forecasts></app-forecast-panel>
+        </div>
+        <div class="col-md-5">
+
+          <app-details-panel
+            [humidity]=data?.humidity
+            [pressure]=data?.pressure
+            [rising]=data?.rising
+            [visibility]=data?.visibility
+          ></app-details-panel>
+
+
+         <app-geo-panel [lat]=lat [lng]=lng></app-geo-panel>
+
+
+        </div>
+      </div>
+    </div>
+  </h1>
+
+</div>
+

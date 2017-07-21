@@ -1,0 +1,26 @@
+.panel-main {
+  background: url(https://images6.alphacoders.com/343/thumb-1920-343137.jpg)no-repeat;
+  min-height: 350px;
+  background-size: cover;
+  width: 50%;
+  margin: 5em auto 0em;
+  box-shadow: 0 0 10px #3C3B3B;
+  color: white;
+}
+.panel-transparent {
+  background: none;
+}
+
+.panel-transparent .panel-heading{
+  background: rgba(122, 130, 136, 0.2)!important;
+}
+
+.panel-transparent .panel-body{
+  background: rgba(46, 51, 56, 0.2)!important;
+  color: white;
+}
+
+
+
+
+

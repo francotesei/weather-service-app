@@ -1,0 +1,12 @@
+<div  style="text-align:center">
+  <div class="body-margin">
+    <app-navbar
+    [location]="origin"
+    ></app-navbar>
+
+    <div class="row tex-center" *ngFor="let board of boards">
+      <app-weather-widget style="cursor: pointer" [board]="board" (click)="gotoDashboard(board?.id)"></app-weather-widget>
+    </div>
+
+  </div>
+</div>

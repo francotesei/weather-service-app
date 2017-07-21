@@ -1,0 +1,21 @@
+<div class="row body-margin">
+  <div class="panel panel-default weather-panel">
+    <div class="panel-header">
+      <div class="panel-header">
+        <h1><b> FORECAST GRAPH</b></h1></div>
+    </div>
+    <div class="panel-body">
+<div class="row">
+  <div class="col-md-12">
+    <canvas baseChart
+            [datasets]="chartData"
+            [labels]="chartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"></canvas>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>

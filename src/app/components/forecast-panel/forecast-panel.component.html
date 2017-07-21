@@ -1,0 +1,40 @@
+<div class="row body-margin">
+  <div class="panel panel-default weather-panel">
+    <div class="panel-header">
+      <div class="panel-header">
+        <h1><b> FORECAST</b></h1></div>
+    </div>
+    <div class="panel-body">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th class="text-center">Date</th>
+          <th class="text-center">Day</th>
+          <th class="text-center">High</th>
+          <th class="text-center">Low</th>
+          <th class="text-center">Status </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let f of forecast">
+          <td>{{f.date}}</td>
+          <td>{{f.day}}</td>
+          <td> <i class="wi wi-thermometer" style="color: red;"></i> {{f.high}}°</td>
+          <td><i class="wi wi-thermometer-exterior"style="color: darkblue;" ></i> {{f.low}}°</td>
+          <td>
+            <i *ngIf="(f.status == 'Partly Cloudy')" class="wi wi-day-cloudy " style="color: yellow;"></i>
+            <i *ngIf="(f.status =='Sunny' || f.status == 'Mostly Sunny' || f.status=='Clear')" class="wi wi-day-sunny" style="color: yellow;"></i>
+            <i *ngIf="(f.status =='Cloudy' || f.status == 'Mostly Cloudy')" class="wi wi-cloudy" style="color: ghostwhite;"></i>
+            <i *ngIf="(f.status =='Thunderstorms' || f.status == 'Rain')" class="wi wi-storm-showers" style="color: grey;"></i>
+            <i *ngIf="(f.status =='Scattered Showers' || f.status == 'Scattered Thunderstorms')" class="wi wi-showers" style="color: blue;"></i>
+
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  /*background: #00ff00 url("http://alliswall.com/file/2915/1920x1200/16:9/good-weather-.jpg") no-repeat fixed center;*/
+  background: rgba(0,0,0,.54) url("./app/img/New York City USA Street Taxi HD Wallpaper.jpg") no-repeat fixed center;
+}
+.body-margin {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+.weather-panel{
+  background-color:  rgba(0,0,0,.54);
+  color: white;
+}
+
