@@ -9,7 +9,7 @@
   "scripts": {
     "preinstall": "npm install -g http-server && npm install -g angular-cli",
     "postinstall": "ng build --prod",
-    "start": "http-server dist/",
+   // "start": "http-server dist/",
     "ng": "ng",
     "start-local": "ng serve",
     "start-dock": "ng serve -H 0.0.0.0",
@@ -20,7 +20,6 @@
   },
   "private": true,
   "dependencies": {
-    "": "1.1.9",
     "@agm/core": "^1.0.0-beta.0",
     "@angular/animations": "^4.3.0",
     "@angular/common": "^4.0.0",
