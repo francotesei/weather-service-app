@@ -6,8 +6,8 @@
     "node": "6.11.0"
   },
   "scripts": {
-    "heroku-prebuild": "npm install -g http-server && npm install -g angular-cli",
-    "heroku-postbuild": "ng build --prod",
+    "preinstall": "npm install -g http-server && npm install -g angular-cli",
+    "postinstall": "ng build --prod",
     "start": "http-server dist/",
     "ng": "ng",
     "start-local": "ng serve",
