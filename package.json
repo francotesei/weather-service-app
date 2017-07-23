@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "engines": {
-    "node": "6.11.0"
+    "node": "v6.11.0",
+    "npm":"3.10.10"
   },
   "scripts": {
     "preinstall": "npm install -g http-server && npm install -g angular-cli",
